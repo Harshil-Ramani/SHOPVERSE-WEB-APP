@@ -1,0 +1,73 @@
+body{
+    background-color: rgb(215, 215, 215);
+}
+#content{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 1000px;
+}
+#content>div{
+    background-color: rgb(255, 255, 255);
+}
+#cartitems{
+    width: 73%;
+}
+#payment{
+    width: 25%;
+}
+
+.cartitem{
+    background-color: rgb(255, 255, 255);
+    margin: 10px 0px;
+    padding: 5px 5px;
+    border-bottom: 1px solid rgb(143, 139, 139);
+    display: flex;
+}
+
+.cartitem img{
+    width: 100px;
+    height: 100px;
+}
+.description{
+    margin: 5px 10px;
+    margin-right: 80px;
+    width:45vw;
+}
+/* .description ul{
+    margin-top: 3px;
+    margin-left: 18px;
+} */
+
+.price{
+    display: flex;
+    width: 12vw;
+    flex-direction: column;
+}
+
+.price h3::after{
+    content: " per item";
+    font-size: 0.9rem;
+    font-weight: 100;
+    color: black;
+    margin-left: 5px;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+}
+.quantity > .number{
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    height: 23px;
+    width: 40px;
+}
+.quantity > *{
+    margin: 10px 5px;
+}
+#increment, #decrement{
+    color: white;
+    background-color: rgb(72 44 89);
+}

@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding:0;
+}
+header{
+    display: flex;
+    align-items: center;
+    background-color: rgb(72 44 89);
+    color: white;
+}
+header #logo{
+    margin-left: 2vw;
+}
+header #search{
+    margin-left: 10vw;
+    display: flex;
+}
+#search a{
+    color: white;
+}
+header #regester{
+    margin-left: 50vw;
+}
+#regester a{
+    color: white;
+}
+header #cart{
+    margin-left: 5vw;
+}
+header #logo img{
+    height: 80px;
+    width:80px;
+}
+header #cart img{
+    height: 45px;
+    width:45px;
+}
+header #log{
+    margin-left:20px;
+}
+header #log a{
+    color: white;
+}

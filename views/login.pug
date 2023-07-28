@@ -1,0 +1,17 @@
+extends base.pug
+block title 
+    |Login
+block style 
+    include ../static/css/login.css
+block content 
+    form(action="/login" method='post')
+        h2 Login form
+        input(type="text" name='username' placeholder='Username')
+        input(type="password" name='password' placeholder='Password')
+        button(type='submit' id='login') login
+        p New User, 
+            a(href='/regester') Regester
+block script 
+    script(src="../static/scripts/login.js") 
+
+

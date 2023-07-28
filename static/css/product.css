@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(222, 222, 222);
+}
+#content{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+
+#filters{
+    color: black;
+    box-shadow: 2px 0px 4px rgb(172, 172, 172);
+    height: 100%;
+    width: 17%;
+    background-color: rgb(255, 255, 255);
+} 
+.filter{
+    border-bottom: 1px solid black;
+    margin: 10px 5px;
+}
+.filteritems{
+    display: flex;
+    margin: 5px 7px;
+    flex-wrap: wrap;
+}
+.filtervalue{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid; */
+    margin: 5px 10px;
+}
+.filtervalue > input{
+    display: block;
+    margin-top: 2px;
+    margin-left:5px;
+}
+
+
+#product{   
+    height:100%;
+    width: 81%;
+    box-shadow: 2px 0px 4px rgb(172, 172, 172);
+    background-color: rgb(255, 255, 255);
+}
+#product-header{
+    padding: 20px 10px;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+#items{
+    margin-top:5px;
+}
+.item{
+    border-bottom: 1px solid rgb(72, 72, 72);
+    margin: 3px 0px;
+    display: flex;
+}
+.item img{
+    margin: 5px 10px;
+    height: 150px;
+    width: 150px;
+}
+.description{
+    margin: 5px 10px;
+    width:45vw;
+}
+.description ul{
+    margin-top: 3px;
+    margin-left: 18px;
+}
+.price{
+    margin: 5px 10px;
+}
+.price button{
+    font-size: 1rem;
+    margin: 10px 0px;
+    height: 30px;
+    width: 10vw;
+    color: white;
+    background-color: rgb(72 44 89);
+}

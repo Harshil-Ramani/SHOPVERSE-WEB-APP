@@ -1,0 +1,58 @@
+extends headerbase.pug
+block style 
+    include ../static/css/header.css
+    include ../static/css/product.css
+block title 
+    |Products
+block content 
+    section#content
+        section#filters
+            //- div#pricefilter
+                //- h4 Price
+                //- select(name="minprice" value="Min" id="min")
+                //-     option(value="Min") Min
+                //-     option(value="250") 250
+                //-     option(value="500") 500
+                //-     option(value="1000") 1000
+                //-     option(value="5000") 5000
+                //-     option(value="10000") 10000
+                //-     option(value="20000")  20000
+                //- |To
+                //- select(name="maxprice" value="Max" id="max")
+                //-     option(value="500") 500
+                //-     option(value="1000") 1000
+                //-     option(value="2000") 2000
+                //-     option(value="5000") 5000
+                //-     option(value="10000") 10000
+                //-     option(value="20000") 20000
+                //-     option(value="50000") 50000
+                //-     option(value="Max") Max
+                //- button(type="submit" class="btn") Apply
+
+            each value,key in filters
+                div.filter
+                    h4 #{key}
+                    div.filteritems
+                        each item in value
+                            div.filtervalue
+                                p #{item[0]}
+                                input(type="checkbox" name=key value=item[0] checked=item[1])
+        section#product
+            div#product-header
+                h3 showing result for #{searchtext}
+                //- p description
+            div#items
+                each product in products
+                    div.item
+                        img(src=product.imgurl)
+                        div.description
+                            h3.header #{product.name}
+                            ul 
+                                each spec in product.description
+                                    li=spec
+                        div.price
+                            h2=product.price+'$'
+                            button.btn(onclick="additem(event)" data-productid=product._id) Add to cart
+block script 
+    script(src="../static/scripts/product.js")
+    script(src="../static/scripts/search.js")

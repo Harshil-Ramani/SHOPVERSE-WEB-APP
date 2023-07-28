@@ -1,0 +1,18 @@
+extends base.pug
+block title 
+    |Regester
+block style 
+    include ../static/css/regester.css
+block content 
+    form(action="/regester" method='post')
+        h2 Regester form
+        input(type="text" name='username' placeholder='Username')
+        input(type="email" name='email' placeholder='Email')
+        input(type="password" name='password' placeholder='Password')
+        button(type='submit' id='reg') Regester
+        p Already have an account , 
+            a(href='/login') Login
+block script
+    script(src="../static/scripts/regester.js") 
+
+

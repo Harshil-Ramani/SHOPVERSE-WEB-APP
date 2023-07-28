@@ -1,0 +1,29 @@
+extends headerbase.pug
+block style 
+    include ../static/css/header.css
+    include ../static/css/cart.css
+    include ../static/css/general.css
+block title 
+    |Cart
+block content 
+    div#content
+        div#cartitems
+            each item in item_list
+                div.cartitem
+                    img(src=item.product.imgurl)
+                    div.description
+                        h3.header #{item.product.name}
+                        //- ul 
+                        //-     each spec in item.product.description
+                        //-         li=spec
+                    div.price
+                        div.quantity
+                            button(class='btn' id='increment' onclick="increment(event)" data-productid=item.product._id) +
+                            div.number
+                                p #{item.quantity}
+                            button(class='btn' id='decrement' onclick="decrement(event)" data-productid=item.product._id) -
+                        h3=item.product.price+'$'
+        div#payment payment
+block script
+    script(src="../static/scripts/search.js") 
+    script(src="../static/scripts/cart.js") 

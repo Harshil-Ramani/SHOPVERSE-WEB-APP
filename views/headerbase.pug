@@ -1,0 +1,22 @@
+html 
+    head 
+        title 
+            block title
+    style 
+        block style 
+    body 
+        header
+            div#logo
+                img(src='/static/img/logo.png')
+            div#search
+                a(href="/product") Search 
+                input(type='text' value=searchtext)
+            div#regester
+                a(href=`${href}`) #{username}
+            div#log
+                a(href='no.c' id='log') #{logtext}
+            div#cart
+                a(href='/cart')
+                    img(src='/static/img/cart.png')
+        block content 
+    block script

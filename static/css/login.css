@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+form{
+    border: 2px solid black;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 15vh auto;
+    padding-top: 20px;
+    background-color: antiquewhite;
+    height: 300px;
+    width: 30vw;
+}
+form > *{
+    margin: 10px 20px;
+}
+form > input{
+    height: 25px;
+    width: 60%;
+    padding: 1px 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid;
+}
+form button{
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 3px;
+    background-color: white;
+}

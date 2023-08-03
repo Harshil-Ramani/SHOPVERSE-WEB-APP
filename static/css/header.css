@@ -2,6 +2,10 @@
     margin:0;
     padding:0;
 }
+a{
+    text-decoration: none;
+    font-size: 18px;
+}
 header{
     display: flex;
     align-items: center;
@@ -9,35 +13,56 @@ header{
     color: white;
 }
 header #logo{
-    margin-left: 2vw;
+    /* border: 1px solid black; */
+    margin-left: 2%;
+    padding: 25px 0px;
+}
+header #logo p{
+    font-size: 1.4rem;
+    color: #cae3f9;
+    text-shadow: 1px 1px 3px rgb(2, 0, 0);
 }
 header #search{
-    margin-left: 10vw;
+    /* border: 1px solid black; */
+    position: relative;
+    margin-left: 10%;
     display: flex;
 }
-#search a{
-    color: white;
+#search img{
+    position: absolute;
+    left: 7px;
+    top:2.5px;
+    height: 17px;
+    width: 17px;
+    background-color: white;
+}
+#search input{
+    border: none;
+    border-radius: 20px;
+    padding-left: 30px;
+    height: 22px;
+    width: 270px;
 }
 header #regester{
-    margin-left: 50vw;
+    /* border: 1px solid black; */
+    margin-left: 45%;
 }
 #regester a{
     color: white;
 }
-header #cart{
-    margin-left: 5vw;
+header #logbtn{
+    /* border: 1px solid black; */
+    margin-left:20px;
 }
-header #logo img{
-    height: 80px;
-    width:80px;
+header #logbtn a{
+    color: white;
+}
+header #cart{
+    /* border: 1px solid black; */
+    margin-left: 4%;
+    justify-self:right;
 }
 header #cart img{
     height: 45px;
     width:45px;
-}
-header #log{
-    margin-left:20px;
-}
-header #log a{
-    color: white;
 }

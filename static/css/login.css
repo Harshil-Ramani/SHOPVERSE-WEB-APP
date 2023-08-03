@@ -10,7 +10,7 @@ form{
     flex-direction: column;
     margin: 15vh auto;
     padding-top: 20px;
-    background-color: antiquewhite;
+    background-color: rgb(240, 240, 240);
     height: 300px;
     width: 30vw;
 }
@@ -28,6 +28,9 @@ form > input{
 form button{
     padding: 5px;
     border: 1px solid;
+    height: 27px;
+    width: 80px;
     border-radius: 3px;
-    background-color: white;
+    background-color: rgb(72 44 89);
+    color: white;
 }

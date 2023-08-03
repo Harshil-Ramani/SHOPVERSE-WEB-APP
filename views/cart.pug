@@ -23,7 +23,18 @@ block content
                                 p #{item.quantity}
                             button(class='btn' id='decrement' onclick="decrement(event)" data-productid=item.product._id) -
                         h3=item.product.price+'$'
-        div#payment payment
+        div#payment 
+            div.info
+                p Total Price
+                    span #{total}
+                p Delivery charge
+                    span 2$
+                p Discount 
+                    span -5$
+                p Final price
+                    span #{total-3}$
+            div.order
+                button(class='btn') place order
 block script
     script(src="../static/scripts/search.js") 
     script(src="../static/scripts/cart.js") 

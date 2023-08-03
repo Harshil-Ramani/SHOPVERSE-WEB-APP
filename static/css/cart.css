@@ -71,3 +71,25 @@ body{
     color: white;
     background-color: rgb(72 44 89);
 }
+.info{
+    border-bottom: 1px solid rgb(195, 195, 195);
+    padding: 5px 10px;
+    font-size: 1.1em;
+    margin: 10px 5px;
+    background-color: rgb(255, 255, 255);
+}
+.info p{
+    margin: 4px 0px;
+}
+.info span{
+    float: right;
+    font-weight: bold;
+}
+.order button{
+    width: 150px;
+    height: 1.7em;
+    color: white;
+    background-color: rgb(72 44 89);
+    float: right;
+    margin-right: 15px;
+}

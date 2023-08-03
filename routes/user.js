@@ -11,17 +11,23 @@ router.get('/login',(req,res)=>{
     res.status(200).render('login');
 });
 
-router.post('/regester',(req,res)=>{
+router.post('/regester',async (req,res)=>{
     data=req.body;
     console.log(data);
     let user=database.user;
     let new_user=new user(data);
-    new_user.save().then((created)=>{
-        req.session.user_id=created._id;
-        res.redirect('/home');
-    }).catch(()=>{
-        res.send("Nope");
-    });
+    let exist=await user.findOne({username:data.username});
+    if(exist!=null){
+        res.redirect("/regester");
+    }
+    else{
+        new_user.save().then((created)=>{
+            req.session.user_id=created._id;
+            res.redirect('/home');
+        }).catch(()=>{
+            res.send("Nope");
+        });
+    }
 });
 
 router.post('/login',(req,res)=>{

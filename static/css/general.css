@@ -6,3 +6,9 @@
     border: none;
     border-radius: 5px;
 }
+button:hover{
+    background-color: rgb(104, 64, 129) !important;
+}
+a:hover{
+    border-bottom: 1px solid white;
+}

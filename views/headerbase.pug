@@ -7,13 +7,15 @@ html
     body 
         header
             div#logo
-                img(src='/static/img/logo.png')
+                a(href='/home')
+                    p Shopeverse
             div#search
-                a(href="/product") Search 
+                a(href="/product")
+                    img(src='/static/img/search.png')
                 input(type='text' value=searchtext)
             div#regester
                 a(href=`${href}`) #{username}
-            div#log
+            div#logbtn
                 a(href='no.c' id='log') #{logtext}
             div#cart
                 a(href='/cart')

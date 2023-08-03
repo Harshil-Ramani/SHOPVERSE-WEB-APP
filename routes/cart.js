@@ -6,7 +6,7 @@ let router=express.Router();
 router.get('/cart',async (req,res)=>{
     let param={username:"Regester",href:"/regester",logtext:"Login"}
     if(req.session.user_id){
-        let user_id=req.session.user_id,item_list=[];
+        let user_id=req.session.user_id,item_list=[],total=0;
         param.username=await database.findusername(user_id);
         param.href='xyz.c';
         param.logtext='Logout';
@@ -17,8 +17,10 @@ router.get('/cart',async (req,res)=>{
                 let product=await database.product.findById(item.product_id);
                 item.product=product;
                 item_list.push(item);
+                total+=item.quantity*item.product.price;
             }
             param.item_list=item_list;
+            param.total=total;
             res.status(200).render('cart',param);
         }
     }
